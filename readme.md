@@ -53,3 +53,25 @@ ModelAndView存储模型数据和路径，需要主动实例化。Model存储模
 
 spring从/resources/static加载静态页面，/resources/templates加载模板页面，页面路径为文件夹下的路径
 
+## day4
+
+MyBatis 
+
+SqlSession，用于向数据库执行SQL，由SqlSessionFactory创建。主配置文件对底层做出详细配置。开发时不用涉及 
+
+Mapper接口，即DAO接口
+
+Mapper映射器，编写SQL，将SQL与实体类映射。
+
+引入依赖mysql,mybatis
+
+在application.properties中编写数据库设置
+
+创建entity/User用户数据类，alt+insert插入Getter Setter toString()
+
+在dao下建立interface UserMapper，定义接口，使用注解@Mapper
+
+在resources/mapper下建立user-mapper.xml，实现接口编写sql语句
+
+通过\<sql id="...">...<\sql> 和\<include refid="..."/>复用sql语句
+
